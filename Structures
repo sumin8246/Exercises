@@ -1,0 +1,47 @@
+# Sumin Kyoung
+# This is our in-class exercise on Sep. 16th, 2014
+
+# 1. Sodium Chloride Crystal Structure
+
+"""This imports the visual, so that we can use "sphere" function"""
+from visual import *
+
+for i in range(1,8,2):
+    for j in range(1,8,2):
+        for k in range(1,8,2):
+            for n in range(2,8,2):
+                for m in range(4,8,2):
+                   sphere(pos=(i,j,k), radius = 0.3, color = color.orange)
+                   sphere(pos=(n,m,k), radius = 0.3, color = color.orange)
+                   sphere(pos=(m,n,k), radius = 0.3, color = color.orange)
+                   sphere(pos=(n,k,m), radius = 0.3, color = color.orange)
+                   sphere(pos=(m,k,n), radius = 0.3, color = color.orange)
+                   sphere(pos=(k,n,m), radius = 0.3, color = color.orange)
+                   sphere(pos=(k,m,n), radius = 0.3, color = color.orange)
+
+
+for i in range(2,8,2):
+    for j in range(2,8,2):
+        for k in range(2,8,2):
+            for n in range(1,8,2):
+                for m in range(3,8,2):
+                   sphere(pos=(i,j,k), radius = 0.3, color = color.cyan)
+                   sphere(pos=(n,m,k), radius = 0.3, color = color.cyan)
+                   sphere(pos=(m,n,k), radius = 0.3, color = color.cyan)
+                   sphere(pos=(n,k,m), radius = 0.3, color = color.cyan)
+                   sphere(pos=(m,k,n), radius = 0.3, color = color.cyan)
+                   sphere(pos=(k,n,m), radius = 0.3, color = color.cyan)
+                   sphere(pos=(k,m,n), radius = 0.3, color = color.cyan)
+
+
+# 2. Face-Centered Cubic Lattice
+
+for i in range(1,5,2):
+    for j in range(1,5,2):
+        for k in range(1,5,2):
+            for n in range(2,4,2):
+                for m in range(1,3):
+                    sphere(pos=(i,j,k), radius = 0.3, color = color.white)
+                    sphere(pos=(n,j,n), radius = 0.3, color = color.white)
+                    sphere(pos=(m+1,n,m), radius = 0.3, color = color.white)
+                    sphere(pos=(m,n,m+1), radius = 0.3, color = color.white)
